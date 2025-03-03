@@ -8,7 +8,10 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    domains: ['images.unsplash.com'], // Add any image domains you're using
+    unoptimized: true,
+  },
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
