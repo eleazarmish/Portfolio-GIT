@@ -92,7 +92,7 @@ const timelineItems = [
   }
 ];
 
-export const AboutSection = () => {
+export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -100,12 +100,12 @@ export const AboutSection = () => {
           <GrowOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">About Me</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A passionate developer and designer with a love for creating beautiful, 
-              functional, and accessible digital experiences.
+              I have led cross-functional teams, participated in hackathons, and worked on real-world projects, including ride-hailing platforms, smart parking systems, and content management tools. My experience spans React, Next.js, JavaScript, API integrations, and backend systems, enabling me to develop intuitive and accessible applications.
             </p>
           </GrowOnScroll>
         </div>
 
+        <h3 className="text-2xl font-bold mb-8">Key Skills & Technologies:</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {skills.map((skill, index) => (
             <GrowOnScroll key={skill.name} delay={index * 0.1}>
@@ -163,4 +163,4 @@ export const AboutSection = () => {
       </div>
     </section>
   );
-};
+}

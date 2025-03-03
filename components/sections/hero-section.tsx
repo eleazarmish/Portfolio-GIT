@@ -39,8 +39,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg md:text-xl mb-8 text-foreground/80">
-              Creating beautiful, intuitive, and accessible digital experiences
-              with a feminine touch.
+              A Computer Science graduate with a strong foundation in software development, algorithms, and system design. I specialize in building scalable, efficient, and user-centric digital solutions, combining technical expertise with strategic thinking.
             </p>
           </motion.div>
           

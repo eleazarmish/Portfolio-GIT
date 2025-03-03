@@ -12,40 +12,44 @@ import { ExternalLink, X } from "lucide-react";
 
 const projects = [
   {
-    id: 1,
-    title: "Bloom - E-commerce Platform",
-    description: "A modern e-commerce platform for a boutique flower shop with online ordering and delivery tracking.",
-    image: "https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-    tags: ["Next.js", "Tailwind CSS", "Stripe", "Framer Motion"],
-    longDescription: "Bloom is a comprehensive e-commerce solution designed for a boutique flower shop. The platform features a stunning product catalog, secure checkout with Stripe integration, real-time delivery tracking, and a customer account system. The UI was designed with a focus on showcasing the beauty of the products while maintaining excellent performance and accessibility.",
-    link: "#"
+    title: "Kolaborate Tools",
+    description: "Developed free tools (content template, image generator, resume/portfolio builder) to attract users and drive sign-ups.",
+    technologies: ["JavaScript", "React", "APIs"],
+    image: "/path/to/image.png",
+    demo: "your-demo-link",
+    github: "your-github-link"
   },
   {
-    id: 2,
-    title: "Serenity - Meditation App",
-    description: "A calming meditation app with guided sessions, progress tracking, and personalized recommendations.",
-    image: "https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80",
-    tags: ["React Native", "TypeScript", "Firebase", "Audio API"],
-    longDescription: "Serenity is a meditation app designed to help users find peace in their busy lives. It features a library of guided meditation sessions, ambient sounds, sleep stories, and breathing exercises. The app includes progress tracking, streak maintenance, and personalized recommendations based on user preferences and behavior. The UI was designed with soft, calming colors and smooth animations to enhance the meditation experience.",
-    link: "#"
+    title: "Library Management System",
+    description: "Designed and built a Library Management System to streamline book borrowing, returns, and inventory management.",
+    technologies: ["JavaScript", "SQL", "Firebase"],
+    image: "/path/to/image.png",
+    demo: "your-demo-link",
+    github: "your-github-link"
   },
   {
-    id: 3,
-    title: "Palette - Design System",
-    description: "A comprehensive design system with components, guidelines, and documentation for consistent product development.",
-    image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    tags: ["React", "Storybook", "Figma", "Accessibility"],
-    longDescription: "Palette is a design system created to ensure consistency across multiple products within an organization. It includes a library of reusable components, design tokens, accessibility guidelines, and comprehensive documentation. The system was built with a focus on flexibility, allowing teams to maintain brand consistency while adapting to specific product needs. The documentation site includes interactive examples, code snippets, and design principles.",
-    link: "#"
+    title: "RideLink",
+    description: "A ride-hailing app designed for efficiency and seamless user experience.",
+    technologies: ["React", "API integration"],
+    image: "/path/to/image.png",
+    demo: "your-demo-link",
+    github: "your-github-link"
   },
   {
-    id: 4,
-    title: "Harmony - Music Streaming",
-    description: "A music streaming platform with personalized playlists, artist spotlights, and social sharing features.",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Vue.js", "Node.js", "Web Audio API", "Socket.io"],
-    longDescription: "Harmony is a music streaming platform that combines high-quality audio with social features. Users can create and share playlists, follow artists and friends, and discover new music through personalized recommendations. The platform includes artist spotlights, live listening sessions, and integration with social media. The UI was designed with a focus on showcasing album artwork and creating an immersive listening experience.",
-    link: "#"
+    title: "Smart Car Parking System",
+    description: "Developed a magnetometer-based smart parking system with a Flutter-based app and an embedded system for real-time monitoring.",
+    technologies: ["Flutter", "Embedded Systems", "IoT"],
+    image: "/path/to/image.png",
+    demo: "your-demo-link",
+    github: "your-github-link"
+  },
+  {
+    title: "Content Calendar",
+    description: "A team-focused content scheduling tool for planning and managing digital content.",
+    technologies: ["Next.js", "Convex", "Clerk"],
+    image: "/path/to/image.png",
+    demo: "your-demo-link",
+    github: "your-github-link"
   }
 ];
 
@@ -66,7 +70,7 @@ export const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <GrowOnScroll key={project.id} delay={index * 0.1}>
+            <GrowOnScroll key={project.title} delay={index * 0.1}>
               <Card 
                 className="overflow-hidden card-hover cursor-pointer h-full flex flex-col"
                 onClick={() => setSelectedProject(project)}
@@ -82,7 +86,7 @@ export const ProjectsSection = () => {
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                    {project.technologies.map((tag) => (
                       <Badge key={tag} variant="outline" className="bg-primary/10 text-primary border-primary/20">
                         {tag}
                       </Badge>
@@ -129,10 +133,10 @@ export const ProjectsSection = () => {
                   />
                 </AspectRatio>
                 <DialogDescription className="text-foreground">
-                  {selectedProject.longDescription}
+                  {selectedProject.description}
                 </DialogDescription>
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {selectedProject.tags.map((tag) => (
+                  {selectedProject.technologies.map((tag) => (
                     <Badge key={tag} variant="outline" className="bg-primary/10 text-primary border-primary/20">
                       {tag}
                     </Badge>
@@ -140,8 +144,15 @@ export const ProjectsSection = () => {
                 </div>
                 <div className="flex justify-end mt-4">
                   <Button className="flex items-center gap-2" asChild>
-                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-                      Visit Project <ExternalLink className="h-4 w-4" />
+                    <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
+                      View Demo <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex justify-end mt-4">
+                  <Button className="flex items-center gap-2" asChild>
+                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
+                      View on GitHub <ExternalLink className="h-4 w-4" />
                     </a>
                   </Button>
                 </div>
