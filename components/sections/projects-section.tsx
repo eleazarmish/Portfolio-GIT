@@ -15,7 +15,7 @@ const projects = [
     title: "Kolaborate Tools",
     description: "Developed free tools (content template, image generator, resume/portfolio builder) to attract users and drive sign-ups.",
     technologies: ["JavaScript", "React", "APIs"],
-    image: "/path/to/image.png",
+    image: "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?q=80&w=2070&auto=format&fit=crop",
     demo: "your-demo-link",
     github: "your-github-link"
   },
@@ -23,7 +23,7 @@ const projects = [
     title: "Library Management System",
     description: "Designed and built a Library Management System to streamline book borrowing, returns, and inventory management.",
     technologies: ["JavaScript", "SQL", "Firebase"],
-    image: "/path/to/image.png",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2070&auto=format&fit=crop",
     demo: "your-demo-link",
     github: "your-github-link"
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "RideLink",
     description: "A ride-hailing app designed for efficiency and seamless user experience.",
     technologies: ["React", "API integration"],
-    image: "/path/to/image.png",
+    image: "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=2128&auto=format&fit=crop",
     demo: "your-demo-link",
     github: "your-github-link"
   },
@@ -39,7 +39,7 @@ const projects = [
     title: "Smart Car Parking System",
     description: "Developed a magnetometer-based smart parking system with a Flutter-based app and an embedded system for real-time monitoring.",
     technologies: ["Flutter", "Embedded Systems", "IoT"],
-    image: "/path/to/image.png",
+    image: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=2070&auto=format&fit=crop",
     demo: "your-demo-link",
     github: "your-github-link"
   },
@@ -47,7 +47,7 @@ const projects = [
     title: "Content Calendar",
     description: "A team-focused content scheduling tool for planning and managing digital content.",
     technologies: ["Next.js", "Convex", "Clerk"],
-    image: "/path/to/image.png",
+    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop",
     demo: "your-demo-link",
     github: "your-github-link"
   }
