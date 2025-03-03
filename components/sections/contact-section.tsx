@@ -40,13 +40,10 @@ export function ContactSection() {
   });
 
   const onSubmit = (data: FormValues) => {
-    // Just log the data to console and show success message
     console.log("Form submitted:", data);
-    
     toast.success("Message received!", {
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
-    
     form.reset();
   };
 
