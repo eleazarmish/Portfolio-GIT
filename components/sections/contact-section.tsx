@@ -27,8 +27,10 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export function ContactSection() {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -37,16 +39,16 @@ export function ContactSection() {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    // Just log the data
+  const onSubmit = (data: FormValues) => {
+    // Just log the data to console
     console.log("Form submitted:", data);
     
-    // Show success toast
+    // Show success message
     toast.success("Message received!", {
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
     
-    // Reset the form
+    // Reset form
     form.reset();
   };
 
